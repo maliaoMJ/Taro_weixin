@@ -1,0 +1,5 @@
+<block>
+    <view class="bookPage">
+        <text>hello world</text>
+    </view>
+</block>

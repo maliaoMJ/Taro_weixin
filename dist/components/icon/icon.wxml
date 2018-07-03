@@ -1,0 +1,5 @@
+<template name="IconFont">
+    <block>
+        <icon class="fa fa-home"></icon>
+    </block>
+</template>

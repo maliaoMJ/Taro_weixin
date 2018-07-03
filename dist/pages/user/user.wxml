@@ -1,0 +1,74 @@
+<block>
+    <view class="UserPage">
+        <block>
+            <view class="isLogin" wx:if="{{userInfo}}">
+                <view class="top">
+                    <image class="wrapper" src="{{userInfo.avatarUrl}}" />
+                    <view class="userInfo">
+                        <image src="{{userInfo.avatarUrl}}" class="userAv" />
+                        <text class="nickName">{{userInfo.nickName}}</text>
+                    </view>
+                </view>
+                <view class="menu">
+                    <view class="item">
+                        <icon class="fa fa-book"></icon>
+                        <text> 我的书架</text>
+                        <icon class="fa fa-angle-right"></icon>
+                    </view>
+                    <view class="item">
+                        <icon class="fa fa-heart"></icon>
+                        <text> 最近阅读</text>
+                        <icon class="fa fa-angle-right"></icon>
+                    </view>
+                    <view class="item">
+                        <icon class="fa fa-star"></icon>
+                        <text> 我的收藏</text>
+                        <icon class="fa fa-angle-right"></icon>
+                    </view>
+                </view>
+            </view>
+            <view class="isNotLogin" wx:else>
+                <icon class="fa fa-grav"></icon>
+                <text class="title">未登录</text>
+                <button class="login" open-type="getUserInfo" bindgetuserinfo="getuserinfo"
+                data-event-getuserinfo-scope="this" data-component-path="{{$path}}">授权登录</button>
+            </view>
+        </block>
+    </view>
+</block>
+<template name="rendDOM">
+    <block>
+        <view class="isLogin" wx:if="{{userInfo}}">
+            <view class="top">
+                <image class="wrapper" src="{{userInfo.avatarUrl}}" />
+                <view class="userInfo">
+                    <image src="{{userInfo.avatarUrl}}" class="userAv" />
+                    <text class="nickName">{{userInfo.nickName}}</text>
+                </view>
+            </view>
+            <view class="menu">
+                <view class="item">
+                    <icon class="fa fa-book"></icon>
+                    <text> 我的书架</text>
+                    <icon class="fa fa-angle-right"></icon>
+                </view>
+                <view class="item">
+                    <icon class="fa fa-heart"></icon>
+                    <text> 最近阅读</text>
+                    <icon class="fa fa-angle-right"></icon>
+                </view>
+                <view class="item">
+                    <icon class="fa fa-star"></icon>
+                    <text> 我的收藏</text>
+                    <icon class="fa fa-angle-right"></icon>
+                </view>
+            </view>
+        </view>
+        <view class="isNotLogin" wx:else>
+            <icon class="fa fa-grav"></icon>
+            <text class="title">未登录</text>
+            <button class="login" open-type="getUserInfo" bindgetuserinfo="getuserinfo"
+            data-event-getuserinfo-scope="this" data-component-path="{{$path}}">授权登录</button>
+        </view>
+    </block>
+</template>
