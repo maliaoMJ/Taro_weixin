@@ -1,4 +1,4 @@
-'use strict';
+"use strict";
 
 Object.defineProperty(exports, "__esModule", {
   value: true
@@ -6,7 +6,7 @@ Object.defineProperty(exports, "__esModule", {
 
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
-var _index = require('../../npm/@tarojs/taro-weapp/index.js');
+var _index = require("../../npm/@tarojs/taro-weapp/index.js");
 
 var _index2 = _interopRequireDefault(_index);
 
@@ -26,19 +26,64 @@ var Book = function (_Component) {
 
     var _this = _possibleConstructorReturn(this, (Book.__proto__ || Object.getPrototypeOf(Book)).call(this, props));
 
-    _this.$usedState = [];
+    _this.$usedState = ["books"];
     _this.$components = {};
     _this.$dynamicComponents = {};
 
+    _this.state = {
+      books: []
+    };
     _this.state = _this._createData();
     return _this;
   }
 
   _createClass(Book, [{
-    key: 'componentDidMount',
-    value: function componentDidMount() {}
+    key: "componentDidMount",
+    value: function componentDidMount() {
+      _index2.default.setStorage({
+        key: 'books',
+        data: []
+      });
+    }
   }, {
-    key: '_createData',
+    key: "componentDidShow",
+    value: function componentDidShow() {
+      var self = this;
+      _index2.default.getStorage({
+        key: 'books',
+        success: function success(res) {
+          console.log('-------book page-----');
+          console.log(res);
+          self.setState({
+            books: res.data
+          });
+        },
+        fail: function fail() {
+          _index2.default.setStorage({
+            key: 'books',
+            data: []
+          });
+        }
+      });
+    }
+  }, {
+    key: "__event_addBooks",
+    value: function __event_addBooks() {
+      _index2.default.scanCode({
+        onlyFromCamera: true,
+        scanType: ['qrCode', 'barCode', 'DataMatrix', 'pdf417']
+      }).then(function (res) {
+        // 扫码成功 1.跳转页面 2.设置state
+        console.log('图书ISBN:' + res.result);
+        _index2.default.navigateTo({
+          url: "/pages/detail/detail?isbn=" + res.result
+        });
+      }).catch(function (error) {
+        console.log("\u83B7\u53D6\u626B\u7801\u6570\u636E\u5931\u8D25\uFF1A" + error);
+      });
+    }
+  }, {
+    key: "_createData",
     value: function _createData() {
       this.__state = arguments[0] || this.state || {};
       this.__props = arguments[1] || this.props || {};

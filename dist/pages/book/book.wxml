@@ -1,5 +1,24 @@
 <block>
     <view class="bookPage">
-        <text>hello world</text>
+        <icon class="fa fa-qrcode" bindtap="addBooks"></icon>
+        <block>
+            <block wx:if="{{books.length > 0}}">
+                <view class="bookItem" wx:key="{{item.title}}" wx:for="{{books}}" wx:for-item="item">
+                    <view class="wrapper">
+                        <image class="bookPic" src="{{item.pic}}" />
+                    </view>
+                    <view class="bookInfos">
+                        <view class="baseInfos">
+                            <text class="bookName">{{item.title}}</text>
+                        </view>
+                        <text class="publisher">作者：{{item.authoer}}</text>
+                        <text class="publisher">出版社：{{item.publisher}}</text>
+                    </view>
+                </view>
+            </block>
+            <block wx:else>
+                <view class="nobook">暂无书籍</view>
+            </block>
+        </block>
     </view>
 </block>

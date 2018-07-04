@@ -2339,16 +2339,23 @@
   clip: auto;
 }
 
-.bookPage {
+.detailPage {
   width: 100%;
   height: 100%;
+  background: #fff;
   position: absolute;
-  top: 0;
-  left: 0;
-  bottom: 0;
   right: 0;
-  background: #fff; }
-  .bookPage .fa-qrcode {
+  bottom: 0;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column; }
+  .detailPage .fa-plus {
     color: #fff;
     background: #f55002;
     width: 80rpx;
@@ -2359,81 +2366,74 @@
     position: fixed;
     bottom: 50rpx;
     right: 50rpx;
-    z-index: 999; }
-  .bookPage .nobook {
-    display: -webkit-box;
-    display: -webkit-flex;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-    -webkit-flex-direction: column;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -webkit-box-align: center;
-    -webkit-align-items: center;
-        -ms-flex-align: center;
-            align-items: center;
-    -webkit-box-pack: center;
-    -webkit-justify-content: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    color: #f7f7f7;
-    font-size: 40rpx;
+    z-index: 999;
+    opacity: 0.5; }
+  .detailPage .bookImg {
     width: 100%;
-    height: 100%; }
-  .bookPage .bookItem {
-    background: #eee;
-    width: 100%;
-    height: 118rpx;
-    border-bottom: 2rpx solid #eeee;
-    font-size: 26rpx;
-    padding: 15rpx;
-    display: -webkit-box;
-    display: -webkit-flex;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-    -webkit-flex-direction: row;
-        -ms-flex-direction: row;
-            flex-direction: row;
-    margin-bottom: 15rpx; }
-    .bookPage .bookItem .bookPic {
-      display: block;
-      width: 110rpx;
-      height: 110rpx;
-      border-radius: 8rpx; }
-
-.bookInfos {
-  -webkit-box-flex: 1;
-  -webkit-flex: 1;
-      -ms-flex: 1;
-          flex: 1;
-  height: 100%;
-  padding-left: 15rpx;
-  padding-right: 15rpx;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box; }
-  .bookInfos .baseInfos {
-    display: block;
-    padding-bottom: 8rpx; }
-  .bookInfos .bookName {
-    font-size: 30rpx;
-    font-weight: bolder; }
-  .bookInfos .publisher {
-    display: block;
-    font-size: 24rpx;
-    padding-bottom: 0; }
-  .bookInfos .bookSummary {
-    color: #aaa;
-    padding-left: 15rpx;
-    -webkit-box-sizing: border-box;
-            box-sizing: border-box;
-    overflow: hidden;
-    white-space: nowrap;
-    -o-text-overflow: ellipsis;
-       text-overflow: ellipsis;
-    overflow: hidden;
-    display: block;
+    height: auto;
+    font-size: 0; }
+    .detailPage .bookImg .bookPic {
+      width: 100%;
+      height: 700rpx; }
+    .detailPage .bookImg .nopic {
+      width: 100%;
+      height: 700rpx;
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+      -webkit-flex-direction: column;
+          -ms-flex-direction: column;
+              flex-direction: column;
+      -webkit-box-align: center;
+      -webkit-align-items: center;
+          -ms-flex-align: center;
+              align-items: center;
+      -webkit-box-pack: center;
+      -webkit-justify-content: center;
+          -ms-flex-pack: center;
+              justify-content: center;
+      color: #cccc;
+      font-size: 50rpx; }
+  .detailPage .bookInfo {
+    height: auto;
     width: 100%; }
+    .detailPage .bookInfo .baseInfo {
+      width: 100%;
+      padding-left: 20rpx;
+      padding-right: 20rpx;
+      height: 50rpx;
+      line-height: 50rpx;
+      background: #fff;
+      -webkit-box-sizing: border-box;
+              box-sizing: border-box;
+      border-bottom: 2rpx solid #eee; }
+      .detailPage .bookInfo .baseInfo .bookName {
+        font-size: 30rpx;
+        float: left; }
+      .detailPage .bookInfo .baseInfo .bookPrice {
+        float: right;
+        color: #f55002;
+        font-size: 27rpx;
+        font-weight: bolder; }
+    .detailPage .bookInfo .bookDetailInfo {
+      width: 100%;
+      height: auto;
+      -webkit-box-sizing: border-box;
+              box-sizing: border-box;
+      font-size: 30rpx;
+      color: #aaa;
+      padding: 10rpx 20rpx 10rpx 10rpx; }
+      .detailPage .bookInfo .bookDetailInfo .autherInfo {
+        width: 100%;
+        padding-top: 10rpx;
+        padding-bottom: 20rpx;
+        overflow: hidden; }
+        .detailPage .bookInfo .bookDetailInfo .autherInfo .publisher {
+          float: right; }
+      .detailPage .bookInfo .bookDetailInfo .bookSummary {
+        line-height: 40rpx;
+        text-indent: 20rpx;
+        padding-bottom: 50rpx; }

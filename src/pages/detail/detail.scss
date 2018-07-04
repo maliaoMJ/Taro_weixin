@@ -1,0 +1,89 @@
+.detailPage {
+  width: 100%;
+  height: 100%;
+  background: #fff;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  flex-direction: column;
+  .fa-plus {
+    color: #fff;
+    background: #f55002;
+    width: 80px;
+    height: 80px;
+    border-radius: 80px;
+    text-align: center;
+    line-height: 80px;
+    position: fixed;
+    bottom: 50px;
+    right: 50px;
+    z-index: 999;
+    opacity: 0.5;
+  }
+  .bookImg {
+    width: 100%;
+    height: auto;
+    font-size: 0px;
+    .bookPic {
+      width: 100%;
+      height: 700px;
+    }
+    .nopic {
+      width: 100%;
+      height: 700px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      color: #cccc;
+      font-size: 50px;
+    }
+  }
+  .bookInfo {
+    height: auto;
+    width: 100%;
+    .baseInfo {
+      width: 100%;
+      padding-left: 20px;
+      padding-right: 20px;
+      height: 50px;
+      line-height: 50px;
+      background: #fff;
+      box-sizing: border-box;
+      border-bottom: 2px solid #eee;
+      .bookName {
+        font-size: 30px;
+        float: left;
+      }
+      .bookPrice {
+        float: right;
+        color: #f55002;
+        font-size: 27px;
+        font-weight: bolder;
+      }
+    }
+    .bookDetailInfo {
+      width: 100%;
+      height: auto;
+      box-sizing: border-box;
+      font-size: 30px;
+      color: #aaa;
+      padding: 10px 20px 10px 10px;
+      .autherInfo {
+        width: 100%;
+        padding-top: 10px;
+        padding-bottom: 20px;
+        overflow: hidden;
+        .publisher {
+          float: right;
+        }
+      }
+      .bookSummary {
+        line-height: 40px;
+        text-indent: 20px;
+        padding-bottom: 50px;
+      }
+    }
+  }
+}

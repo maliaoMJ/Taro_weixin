@@ -9,14 +9,18 @@ import configStore from './store';
 import './app.scss';
 
 const store = configStore();
-
 class App extends Component {
   config = {
-    pages: ['pages/user/user', 'pages/book/book', 'pages/index/index'],
+    pages: [
+      'pages/index/index',
+      'pages/book/book',
+      'pages/detail/detail',
+      'pages/user/user'
+    ],
     window: {
       backgroundTextStyle: 'light',
       navigationBarBackgroundColor: '#f55002',
-      navigationBarTitleText: '菱歌FE团队',
+      navigationBarTitleText: '图书详情',
       navigationBarTextStyle: 'light',
       enablePullDownRefresh: false,
       onReachBottomDistance: 30,

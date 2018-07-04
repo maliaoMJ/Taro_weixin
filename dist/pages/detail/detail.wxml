@@ -1,0 +1,29 @@
+<block>
+    <view class="detailPage">
+        <icon class="fa fa-plus" bindtap="addBook" data-event-addBook-scope="this"
+        data-component-path="{{$path}}"></icon>
+        <view class="bookImg">
+            <block>
+                <block wx:if="{{bookInfoObj.pic}}">
+                    <image class="bookPic" src="{{bookInfoObj.pic}}" />
+                </block>
+                <block wx:else>
+                    <view class="nopic">暂无该书封面</view>
+                </block>
+            </block>
+        </view>
+        <view class="bookInfo">
+            <view class="baseInfo">
+                <text class="bookName">{{bookInfoObj.author}}-{{bookInfoObj.title}}</text>
+                <text class="bookPrice">售价：{{bookInfoObj.price}}￥</text>
+            </view>
+            <view class="bookDetailInfo">
+                <view class="autherInfo">
+                    <text class="auther">作者：{{bookInfoObj.author}}</text>
+                    <text class="publisher">出版社：{{bookInfoObj.publisher}}</text>
+                </view>
+                <text class="bookSummary">{{bookInfoObj.summary}}</text>
+            </view>
+        </view>
+    </view>
+</block>

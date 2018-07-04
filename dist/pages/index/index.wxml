@@ -1,9 +1,40 @@
 <block>
-    <view class="index">
-        <button class="add_btn" bindtap="add">+</button>
-        <button class="dec_btn" bindtap="dec">-</button>
-        <button class="dec_btn" bindtap="asyncAdd">async</button>
-        <view>{{counter.num}}</view>
-        <view>Hello, World</view>
+    <view class="index">{{}}
+        <view class="bannerImg">
+            <swiper class="swiper" indicator-dots="true" indicator-color="rgba(0,0,0,0.3)"
+            indicator-active-color="#fff" autoplay="true" duration="{{2000}}" interval="{{3000}}"
+            circular="{{true}}">
+                <swiper-item>
+                    <image class="swiperImage" src="http://img02.tooopen.com/images/20150928/tooopen_sy_143912755726.jpg"
+                    />
+                </swiper-item>
+                <swiper-item>
+                    <image class="swiperImage" src="http://img06.tooopen.com/images/20160818/tooopen_sy_175866434296.jpg"
+                    />
+                </swiper-item>
+                <swiper-item>
+                    <image class="swiperImage" src="http://img06.tooopen.com/images/20160818/tooopen_sy_175833047715.jpg"
+                    />
+                </swiper-item>
+            </swiper>
+        </view>
+        <view class="contentBox">
+            <view class="booksCategory">
+                <icon class="fa fa-fire"></icon>
+                <text class="title"> 最新书籍</text>
+            </view>
+            <view class="booksCategory">
+                <icon class="fa fa-flag-checkered"></icon>
+                <text class="title"> 推荐书籍</text>
+            </view>
+            <view class="booksCategory">
+                <icon class="fa fa-heartbeat"></icon>
+                <text class="title"> 热门书籍</text>
+            </view>
+            <view class="booksCategory">
+                <icon class="fa fa-star"></icon>
+                <text class="title"> 古典文学</text>
+            </view>
+        </view>
     </view>
 </block>

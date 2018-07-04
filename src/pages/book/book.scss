@@ -1,0 +1,82 @@
+.bookPage {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background: #fff;
+  .fa-qrcode {
+    color: #fff;
+    background: #f55002;
+    width: 80px;
+    height: 80px;
+    border-radius: 80px;
+    text-align: center;
+    line-height: 80px;
+    position: fixed;
+    bottom: 50px;
+    right: 50px;
+    z-index: 999;
+  }
+  .nobook {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: rgb(247, 247, 247);
+    font-size: 40px;
+    width: 100%;
+    height: 100%;
+  }
+  .bookItem {
+    background: #eee;
+    width: 100%;
+    height: 118px;
+    border-bottom: 2px solid #eeee;
+    font-size: 26px;
+    padding: 15px;
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 15px;
+    .bookPic {
+      display: block;
+      width: 110px;
+      height: 110px;
+      border-radius: 8px;
+    }
+  }
+}
+
+.bookInfos {
+  flex: 1;
+  height: 100%;
+  padding-left: 15px;
+  padding-right: 15px;
+  box-sizing: border-box;
+  .baseInfos {
+    display: block;
+    padding-bottom: 8px;
+  }
+  .bookName {
+    font-size: 30px;
+    font-weight: bolder;
+  }
+  .publisher {
+    display: block;
+    font-size: 24px;
+    padding-bottom: 0px;
+  }
+  .bookSummary {
+    color: #aaa;
+    padding-left: 15px;
+    box-sizing: border-box;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    display: block;
+    width: 100%;
+  }
+}

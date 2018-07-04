@@ -49,7 +49,7 @@ var Index = (_dec = (0, _index3.connect)(function (_ref) {
 
     var _this = _possibleConstructorReturn(this, (Index.__proto__ || Object.getPrototypeOf(Index)).call(this, props));
 
-    _this.$usedState = ["counter"];
+    _this.$usedState = [];
     _this.$components = {};
     _this.$dynamicComponents = {};
 

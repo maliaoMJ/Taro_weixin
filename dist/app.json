@@ -1,13 +1,14 @@
 {
   "pages": [
-    "pages/user/user",
+    "pages/index/index",
     "pages/book/book",
-    "pages/index/index"
+    "pages/detail/detail",
+    "pages/user/user"
   ],
   "window": {
     "backgroundTextStyle": "light",
     "navigationBarBackgroundColor": "#f55002",
-    "navigationBarTitleText": "菱歌FE团队",
+    "navigationBarTitleText": "图书详情",
     "navigationBarTextStyle": "light",
     "enablePullDownRefresh": false,
     "onReachBottomDistance": 30,
